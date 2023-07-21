@@ -1,6 +1,6 @@
-# Showcase Title
+# OAVL_ValidateLegalDocuments
 
-Confluence page:
+Confluence page: https://uipath.atlassian.net/wiki/spaces/RFI/pages/87277994994/OAVL+ValidateLegalDocuments
 
 
 Github Repo Guideline:
