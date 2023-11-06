@@ -1,5 +1,6 @@
 {
   "name": "OAVL_ValidateLegalDocuments",
+  "projectId": "6a8fd544-9955-4527-8d91-542e90a8afb3",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -45,7 +46,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
