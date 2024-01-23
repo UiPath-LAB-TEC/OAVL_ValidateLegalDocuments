@@ -1,0 +1,176 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OAVL_ValidateLegalDocuments_OpenAI_TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362.4,860" sap2010:WorkflowViewState.IdRef="OAVL_ValidateLegalDocuments_OpenAI_TestCase_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C4AC2AB14D0_generateChatCompletion_Create.Bundle;assembly=C4AC2AB14D0_generate.Zvkhs3WWPSF196GNV2q2pHF3" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OAVL_ValidateLegalDocuments_OpenAI_TestCase" sap:VirtualizedContainerService.HintSize="512,795.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="topGeneratedText" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="449.6,104.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="449.6,296" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <isactr:ConnectorActivity Configuration="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" ConnectionId="bac605d9-d80f-48ad-b36e-f927a653496f" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="387.2,184" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="67c3bebc-9c43-36e2-87bd-57bcbec902a8">
+        <isactr:ConnectorActivity.Arguments>
+          <isactr:FieldArgument Name="prompt">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:String">Write an email to a new sales lead</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="instruction">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:String" />
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="model">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:String">gpt-4</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="max_tokens">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Int32">1920</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="n">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="temperature">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Double">1</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="top_p">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Double">1</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="stream">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="stop">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:String" />
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="presence_penalty">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Double">0</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="frequency_penalty">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:Double">0</InArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="user">
+            <isactr:FieldArgument.Argument>
+              <InArgument x:TypeArguments="x:String" />
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="out_text">
+            <isactr:FieldArgument.Argument>
+              <OutArgument x:TypeArguments="x:String">[topGeneratedText]</OutArgument>
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+          <isactr:FieldArgument Name="Jit_generateChatCompletion">
+            <isactr:FieldArgument.Argument>
+              <OutArgument x:TypeArguments="uiascb:generateChatCompletion_Create" />
+            </isactr:FieldArgument.Argument>
+          </isactr:FieldArgument>
+        </isactr:ConnectorActivity.Arguments>
+      </isactr:ConnectorActivity>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="449.6,202.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[topGeneratedText.Length&gt;5]" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+    </Sequence>
+  </Sequence>
+</Activity>
